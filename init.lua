@@ -7,6 +7,8 @@ vim.g.perl_host_prog = vim.fn.expand("/opt/homebrew/bin/perl")
 vim.g.lua_host_prog = vim.fn.expand("/Users/topaz/.luaver/lua/5.1.5/bin/lua")
 vim.g.ruby_host_prog = vim.fn.expand("~/.rbenv/shims/ruby")
 
+vim.opt.clipboard = "unnamedplus"
+
 -- Set default color scheme
 vim.cmd.colorscheme("cyberdream")
 require("lspconfig").ruff.setup({
