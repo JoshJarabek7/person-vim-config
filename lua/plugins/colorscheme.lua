@@ -1,21 +1,13 @@
 return {
-  { "kepano/flexoki-neovim", name = "flexoki" },
-  { "nyoom-engineering/oxocarbon.nvim", name = "oxocarbon" },
   {
-    "scottmckendry/cyberdream.nvim",
+    "sainnhe/gruvbox-material",
     lazy = false,
     priority = 1000,
     config = function()
-      require("cyberdream").setup({
-        transparent = true,
-        italic_comments = false,
-        hide_fillchars = false,
-        borderless_telescope = true,
-        terminal_colors = true,
-        theme = {
-          variant = "default",
-        },
-      })
+      vim.g.gruvbox_material_enable_italic = true
+      vim.cmd.colorscheme("gruvbox-material")
+      vim.g.gruvbox_material_background = "medium"
+      vim.g.gruvbox_material_foreground = "original"
     end,
   },
 }
